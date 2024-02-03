@@ -26,7 +26,10 @@ public Mono<String> fruits(){
     });
     System.out.println("_____________");
     fl.fruitflux().subscribe(s->{System.out.println("Mono->s ="+s);});
+    
+    System.out.println("Changed");
     }
 
+	
 	}
 
