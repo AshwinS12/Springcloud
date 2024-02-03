@@ -13,10 +13,7 @@ public class FluxMono {
 	public Flux<String>fruitflux(){
 		return Mono.just("Mango").flatMapMany(s->Flux.just(s.split(""))).log();
 	}
-public Mono<String> fruits(){
-	var fruits = Mono.just("Apples");
-	var veggies = Mono.just("Cauliflower");
-	return fruits.zipWith(veggies,(first,second)->first+second).log();
+
 }
 	public static void main(String[] args) {
     FluxMono fl = new FluxMono();
@@ -28,8 +25,8 @@ public Mono<String> fruits(){
     fl.fruitflux().subscribe(s->{System.out.println("Mono->s ="+s);});
     
     System.out.println("Changed");
-    }
-
-	
+    
+	  System.out.println("deleted a method , cleanup activity");
+	  }
 	}
 
